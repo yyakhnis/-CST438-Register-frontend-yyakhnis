@@ -34,16 +34,17 @@ class AddStudent extends Component {
     }
 
     render()  { 
+	const { open, name, email } = this.state;
       return (
           <div>
             <Button variant="outlined" color="primary" style={{margin: 10}} onClick={this.handleClickOpen}>
               Add Student
             </Button>
-            <Dialog open={this.state.open} onClose={this.handleClose}>
+            <Dialog open={open} onClose={this.handleClose}>
                 <DialogTitle>Add Student</DialogTitle>
                 <DialogContent  style={{paddingTop: 20}} >
-					<TextField autoFocus fullWidth label="Student Name" name="name" onChange={this.handleChange}  /> 
-					<TextField autoFocus fullWidth label="Student Email" name="email" onChange={this.handleChange}  />
+					<TextField autoFocus fullWidth label="Student Name" name="name" onChange={this.handleChange} value={name}  /> 
+					<TextField fullWidth label="Student Email" name="email" onChange={this.handleChange} value={email}  />
                   
                 </DialogContent>
                 <DialogActions>
