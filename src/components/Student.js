@@ -74,7 +74,7 @@ class Student extends Component {
 		  <div className="App">
 		   <Grid container>
               <Grid item>
-			    <ButtonGroup>
+			    <ButtonGroup id="addStudent">
                   <AddStudent addStudent={this.addStudent}  />
 				</ButtonGroup>
 				<Button component={Link} 
